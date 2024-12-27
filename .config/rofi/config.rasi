@@ -1,0 +1,84 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono Nerd Font Medium 16"; // Slightly larger font
+  modi: "window,run,drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #181A2B;         // Darker background for more contrast
+  bg-alt: #282C3E;     // Slightly lighter background for selected items
+  fg: #ECEFF4;         // Brighter foreground for better readability
+  fg-alt: #ABB2BF;     // Slightly darker foreground for unselected items
+  window-border-color: #3E4451; // More distinct border color
+
+  background-color: @bg;
+  border: 2;         // Added a small border
+  margin: 2;         // Added margin around the window
+  padding: 0;
+  spacing: 4;         // Added spacing between elements
+}
+
+window {
+  transparency: "real";
+  width: 400;        // Set a fixed width for consistency (adjust as needed)
+  location: center;     // Center the window on the screen
+  x-offset: 0;
+  y-offset: 0;
+}
+
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview];
+  padding: 12;      // Added padding to the main box
+}
+
+inputbar {
+  children: [prompt, entry]; // Put prompt inside the inputbar
+  padding: 0 0 12 0;
+}
+
+prompt {
+  background-color: inherit; // Make prompt background transparent
+  padding: 0 12 0 12; // Adjusted padding
+  text-color: @fg;
+}
+
+entry {
+  background-color: inherit; // Make entry background transparent
+  padding: 1;
+  text-color: @fg;
+}
+
+listview {
+  background-color: inherit;
+  columns: 1;
+  lines: 5;                // Reduced the number of lines
+    fixed-height: true; //Prevents list from changing height
+}
+
+element {
+  padding: 2 2;       // Adjusted padding for elements
+  text-color: @fg-alt;
+  orientation: horizontal;
+}
+
+element selected {
+  background-color: @bg-alt; // Highlight selected element
+  text-color: @fg;
+}
+
+element-icon {
+    size: 24;            // Increased icon size
+    padding: 0 8 0 0; // Padding to the right of the icon
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+}

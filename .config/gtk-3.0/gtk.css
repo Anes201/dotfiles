@@ -1,0 +1,139 @@
+/* Main panel style */
+.xfce4-panel {
+    border-bottom: 1px solid #61AFEF;
+    background-color: #2C3E50;
+    color: #dfdfdf;
+}
+
+/* Button styling */
+.xfce4-panel button {
+    border: none;
+    border-radius: 3px;
+    background-color: inherit;
+    padding: 0 8px;
+    margin: 3px;
+    color: #dfdfdf;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Styling the icons */
+.xfce4-panel button .icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+}
+
+/* Focused button styling */
+.xfce4-panel button:focus {
+    outline: none;
+    background-color: #34495E;
+}
+
+/* Active button styling (when clicked or selected) */
+.xfce4-panel button:active {
+    background-color: #1ABC9C;
+    color: #fff;
+}
+
+/* Add some padding to the panel */
+.xfce4-panel .panel-button {
+    padding: 0 6px;
+}
+
+/* Fix icons showing correctly in opened windows */
+.xfce4-panel button .icon, 
+.xfce4-panel button .icon-size-16 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Styling for the window buttons (minimize, maximize, close) */
+.xfce4-panel .window-list button {
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #dfdfdf;
+    background-color: #34495E;
+}
+
+.xfce4-panel .window-list button:hover {
+    background-color: #1ABC9C;
+}
+
+/* Text labels in window list */
+.xfce4-panel .window-list button .window-title {
+    color: #ffffff;
+}
+
+
+ /*
+    #docklike-plugin
+	    .group
+	    .open_group
+	    .active_group
+	    .window_count
+	    .menu
+	    .active_menu_item
+	    .hover_menu_item
+*/
+
+#launcher-7 button {
+	border-radius: 3px 0 0 3px;
+	background-color: #D86871;
+}
+
+#whiskermenu-button,
+#applicationmenu-button,
+#launcher-13 button {
+	margin: 3px;
+	border-radius: 3px;
+}
+
+#whiskermenu-button:hover,
+#applicationmenu-button:hover,
+#launcher-13 button:hover {
+	background-color: #252630;
+}
+
+
+
+#clock-button {
+	border-radius: 0 3px 3px 0;
+	color: #1a1b26;
+	background-color: #98C379;
+}
+
+VteTerminal, vte-terminal {
+	padding: 5px 10px;
+}
+
+.tasklist {
+	background-color: #2a2e43;
+}
+
+.tasklist button {
+	padding: 0 10px;
+}
+
+}
+
+.tasklist button:checked {
+	background-color: #61afef;
+	color: #1a1b26;
+  border: none;
+}
+
+#pager-4 grid {
+	color: #efefef;
+	font-size: 15px;
+}
+#pager-4 button {
+	border-radius: 3px;
+	font-weight: bold;
+	background-color: inherit;
+	padding: 0 8px;
+}
+#pager-4 button:checked	{
+	background-color: #61AFEF;
+	color: #1a1b26;
+}
